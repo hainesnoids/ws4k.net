@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/lastfm.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- libDialog -->
+    <script src="https://raw.githack.com/Nodysey/libdialog/main/libdialog.js"></script>
+    <link rel="stylesheet" href="css/libdialog.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                libDialog.useLocalFiles( true, 'https://git.gay/hainesnoids/libdialog/raw/branch/main/defaults/img', 'https://git.gay/hainesnoids/libdialog/raw/branch/main/defaults/sounds' )
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -50,7 +60,7 @@
                 </div>
                 <div class="flex-row space-between">
                     <span style="font-size: 8pt;">@okayxairen permission granted</span>
-                    <span style="font-size: 8pt; color: var(--secondary); cursor: pointer; text-decoration: underline;" onclick="alert('If you get your internet from Comcast, the visitor count may not work as they have falsely flagged the backend server as malicious.\n\nAlternatively, you can visit http:\/\/hnds.lewolfyt.cc in a new tab and approve the site manually.')">help</span>
+                    <span style="font-size: 8pt; color: var(--secondary); cursor: pointer; text-decoration: underline;" onclick="showDialog('If you get your internet from Comcast, the visitor count may not work as they have falsely flagged the backend server as malicious.\n\nAlternatively, you can visit http:\/\/hnds.lewolfyt.cc in a new tab and approve the site manually.')">help</span>
                 </div>
             </div>
             <div class="section socials" id="socials">
@@ -70,13 +80,25 @@
                     <img src="img/icon/github.svg" alt="GitHub Icon">
                     GitHub
                 </a>
+                <a href="https://steamcommunity.com/id/hainesnoids">
+                    <img src="img/icon/steam.svg" alt="Steam Icon">
+                    Steam
+                </a>
+                <a href="https://last.fm/user/hainesnoids">
+                    <img src="img/icon/lastfm.svg" alt="Last.fm Icon">
+                    Last.fm
+                </a>
+                <a href="https://bandcamp.com/hainesnoids">
+                    <img src="img/icon/twitch.svg" alt="Twitch Icon">
+                    Twitch
+                </a>
                 <a href="https://en.pronouns.page/@hainesnoids">
                     <img src="img/icon/pronounspage.svg" alt="Pronouns.page Icon">
                     Pronouns.page
                 </a>
-                <a href="https://steamcommunity.com/id/hainesnoids">
-                    <img src="img/icon/steam.svg" alt="Steam Icon">
-                    Steam
+                <a href="https://bandcamp.com/hainesnoids">
+                    <img src="img/icon/bandcamp.svg" alt="Bandcamp Icon">
+                    Bandcamp (fan profile)
                 </a>
             </div>
         </div>
@@ -220,6 +242,18 @@
             </div>
         </div>
     </div>
+    <template id="libdialog">
+        <dialog class="libdialog-dialog">
+            <div class="libdialog-header">
+                <img class="libdialog-icon" src="img/dialog-info.png" alt="">
+                <h1 class="libdialog-title"></h1>
+                <p class="libdialog-content"></p>
+            </div>
+            <hr>
+            <div class="libdialog-buttons">
+            </div>
+        </dialog>
+    </template>
     <script src="oneko/oneko.js"></script>
     <script src="js/index.js"></script>
     <script src="js/musicplayer.js"></script>

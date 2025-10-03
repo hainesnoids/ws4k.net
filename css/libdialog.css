@@ -1,0 +1,82 @@
+.libdialog-dialog * {
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+.libdialog-dialog {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 320px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #424242;
+    color: #e7ce4a;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0.6vw 0.6vw #00000080, inset 1px 1px 1px #424242, inset 2px 2px 2px 2px #969696, inset -1px -1px 1px #424242, inset -2px -2px 2px 2px #202020;
+    text-shadow: 1.25px 1.25px #000;
+    z-index: 9999;
+}
+.libdialog-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 60px;
+}
+.libdialog-icon {
+    height: 48px;
+    margin-right: 6px;
+}
+.libdialog-title {
+    display: none;
+    margin: 0;
+}
+.libdialog-content {
+    font-size: 14pt;
+    margin: 0;
+    color: #e7ce4a;
+}
+.libdialog-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.libdialog-separator,
+.libdialog-dialog hr {
+    margin: 16px 0;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 6px;
+    border-color: #0009 #fff8 #fff8 #0009;
+    padding: 1px;
+    filter: blur(1px);
+}
+.libdialog-button {
+    cursor: pointer;
+    min-width: 1rem;
+    min-height: 23px;
+    padding: 1px 12px;
+    font-weight: normal;
+    border: 0;
+    border-radius: 8px;
+    font-size: 12pt;
+    background: #afafaf;
+    color: #000;
+    box-shadow:
+            inset 1px 1px 1px .25px #b5b5b5,
+            inset 2px 2px .25px #fff,
+            inset -1px -1px 2px #444444,
+            0 0 1px black,0 0 1px 2px #333333,
+            1px 1px 0 2px #444444,0 0 0 2px #000;
+    float:right;
+    margin-left:1vw;
+    z-index:10003;
+}
+.libdialog-button:active {
+    background: #999999;
+    box-shadow:
+            inset 1px 1px 1px .25px #333333,
+            inset 2px 2px .25px #777777,
+            inset -1px -1px 2px #b5b5b5,
+            0 0 1px black,0 0 1px 2px #333333,
+            1px 1px 0 2px #444444,0 0 0 2px #000;
+}
