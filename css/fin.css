@@ -1,0 +1,186 @@
+/* unrelated to the site */
+
+html {
+    scrollbar-width: none;
+}
+
+#nowPlayingPage .remoteControlContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+#nowPlayingPage .nowPlayingInfoContainer {
+    width: 50vw;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    position: static;
+}
+
+#nowPlayingPage .nowPlayingPageImageContainer {
+    display: flex;
+    aspect-ratio: 1;
+    width: auto;
+    height: 40vh;
+    max-height: 60vw;
+}
+#nowPlayingPage .nowPlayingPageImage {
+    width: auto;
+    height: 100%;
+    max-height: 60vw;
+    box-shadow: 0 0 1vh rgba(0,0,0,.4);
+}
+
+#nowPlayingPage .nowPlayingInfoContainerMedia {
+    width: 100%;
+    height: 0;
+    margin: 16px 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#nowPlayingPage .nowPlayingSongName,
+#nowPlayingPage .nowPlayingArtist,
+#nowPlayingPage .nowPlayingArtist a,
+#nowPlayingPage .nowPlayingAlbum,
+#nowPlayingPage .nowPlayingAlbum a {
+    text-align: center;
+    color: #fff;
+    /*font-size: 12pt;*/
+    font-size: 2.2vh;
+    /*font-weight: 400;*/
+    margin: 0;
+    text-shadow: 0 0 1vh rgba(0,0,0,.4);
+}
+#nowPlayingPage .nowPlayingAlbum {
+    display: none;
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#nowPlayingPage .nowPlayingInfoControls {
+    height: min-content;
+    flex-grow: 0;
+}
+
+#nowPlayingPage:not(:hover) .sliderContainer:has(.nowPlayingPositionSliderContainer),
+#nowPlayingPage:not(:hover) .nowPlayingInfoButtons, #nowPlayingPage:not(:hover) .nowPlayingSecondaryButtons,
+#reactRoot:not(:hover) .headerTop {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    transition-delay: 1s;
+}
+
+#nowPlayingPage .sliderContainer:has(.nowPlayingPositionSliderContainer), #nowPlayingPage:has(*:focus) .sliderContainer:has(.nowPlayingPositionSliderContainer),
+#nowPlayingPage .nowPlayingInfoButtons, #nowPlayingPage:has(*:focus) .nowPlayingInfoButtons, #nowPlayingPage .nowPlayingSecondaryButtons,
+#reactRoot:has(#nowPlayingPage *:focus) .headerTop {
+    transition: opacity .3s ease-out;
+    opacity: 1;
+}
+
+#nowPlayingPage .sliderContainer:has(.nowPlayingPositionSliderContainer) {
+    position: absolute;
+    bottom: 72px;
+    left: 36px;
+    width: calc(100% - 72px);
+    filter: drop-shadow(0 0 1vh rgba(0,0,0,.5));
+}
+
+#nowPlayingPage .nowPlayingInfoButtons {
+    position: absolute;
+    bottom: 12px;
+    left: 24px;
+    filter: drop-shadow(0 0 1vh rgba(0,0,0,.5));
+}
+
+#nowPlayingPage .nowPlayingSecondaryButtons {
+    position: absolute;
+    bottom: 12px;
+    right: 24px;
+    height: 56px;
+    filter: drop-shadow(0 0 1vh rgba(0,0,0,.5));
+}
+
+
+#nowPlayingPage .playlistSection {
+    position: absolute;
+    top: 20%;
+    left: calc(100% - 8px);
+    transition: left .3s ease;
+    width: 100%;
+    height: 60%;
+    overflow: scroll;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+}
+
+#nowPlayingPage .playlistSection:hover {
+    left: calc(100% - 425px);
+    margin-right: 12px;
+}
+
+#nowPlayingPage .playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: relative;
+    z-index: 99999;
+}
+
+#nowPlayingPage .playlistSectionButton {
+    display: none;
+}
+
+#nowPlayingPage .playlist .listItem {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-radius: 0;
+    width: 420px;
+    margin: 0;
+    height: 64px;
+}
+
+#nowPlayingPage .playlist .listItem .listViewUserDataButtons {
+    display: none;
+}
+
+#nowPlayingPage .playlist .listViewDragHandle {
+    display: none;
+}
+
+/* Handling for Now Playing Page Background plugin */
+
+#nowPlayingPage {
+    background-color: #000;
+}
+
+.nowPlayingPageBackground {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0vw;
+    left: 0vh;
+    z-index: 0;
+    background-position: center;
+    background-size: 100vw 100vw;
+    background-repeat: repeat;
+    filter: blur(15vh);
+    opacity: 1;
+    transform: scale(1.5, -1.5);
+}
