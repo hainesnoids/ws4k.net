@@ -8,16 +8,16 @@ const albums = [
         "cover": "Prefer not to say.jpg"
     },
     {
+        "title": "Love & Ponystep",
+        "artist": "Vylet Pony",
+        "url": "https://vyletpony.bandcamp.com/album/love-ponystep",
+        "cover": "love-ponystep.png"
+    },
+    {
         "title": "REACTOR",
         "artist": "femtanyl",
         "url": "https://femtanyl.bandcamp.com/album/reactor",
         "cover": "REACTOR.jpg"
-    },
-    {
-        "title": "CHASER",
-        "artist": "femtanyl",
-        "url": "https://femtanyl.bandcamp.com/album/chaser",
-        "cover": "CHASER.jpg"
     },
     {
         "title": "Now That I Have You",
@@ -26,10 +26,16 @@ const albums = [
         "cover": "Now That I Have You.jpg"
     },
     {
-        "title": "Rotti",
-        "artist": "Mere Notilde",
-        "url": "https://merenotilde.bandcamp.com/album/rotti-album",
-        "cover": "Rotti.jpg"
+        "title": "Can Opener's Notebook: Fish Whisperer",
+        "artist": "Vylet Pony",
+        "url": "https://vyletpony.bandcamp.com/album/can-openers-notebook-fish-whisperer",
+        "cover": "can opener.jpg"
+    },
+    {
+        "title": "Wallsocket",
+        "artist": "underscores",
+        "url": "https://underscores.bandcamp.com/album/wallsocket",
+        "cover": "cool-looking-horseshoe.jpg"
     }
 ]
 

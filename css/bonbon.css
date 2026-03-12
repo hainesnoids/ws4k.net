@@ -1,0 +1,9 @@
+body:after {
+    content: url('../img/lyra-bon-bon.webp');
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: block;
+    scale: 20%;
+    transform-origin: bottom right;
+}
